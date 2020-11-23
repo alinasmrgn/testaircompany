@@ -3,7 +3,7 @@ package plane;
 import java.util.Objects;
 
 abstract public class Plane {
-    String planeModel;
+    private String planeModel;
     private int maxSpeed;
     private int maxFlightDistance;
     private int maxLoadCapacity;
@@ -14,6 +14,8 @@ abstract public class Plane {
         this.maxFlightDistance = maxFlightDistance;
         this.maxLoadCapacity = maxLoadCapacity;
     }
+
+
 
     public int getMaxSpeed() {
         return maxSpeed;
@@ -28,7 +30,7 @@ abstract public class Plane {
     @Override
     public String toString() {
         return "Plane{" +
-                "planeModel='" + planeModel + '\'' +
+                "model='" + planeModel + '\'' +
                 ", maxSpeed=" + maxSpeed +
                 ", maxFlightDistance=" + maxFlightDistance +
                 ", maxLoadCapacity=" + maxLoadCapacity +

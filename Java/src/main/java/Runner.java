@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Runner {
-    private static List<Plane> allPlanesList = Arrays.asList(
+    private static List<Plane> planes = Arrays.asList(
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
             new PassengerPlane("Boeing-747", 980, 16100, 70500, 242),
@@ -24,7 +24,7 @@ public class Runner {
     );
 
     public static void main(String[] args) {
-        Airport airport = new Airport(allPlaneList);
+        Airport airport = new Airport(planes);
         Airport militaryAirport = new Airport(airport.getMilitaryPlanesList());
         Airport passengerAirport = new Airport(airport.getPassengerPlanesList());
         System.out.println("Military airport sorted by max distance: " + militaryAirport.sortByMaxDistance().toString());

@@ -13,17 +13,19 @@ public class MilitaryPlane extends Plane{
         this.militaryType = militaryType;
     }
 
-    public MilitaryPlaneType getMilitaryType() { return militaryType; }
+    public MilitaryPlaneType getMilitaryType() {
+        return militaryType;
+    }
 
     @Override
     public String toString() {
         return super.toString().replace("}",
-                ", militaryType=" + militaryType +
+                ", type=" + militaryType +
                 '}');
     }
 
     @Override
-    public boolean equals(Object plane {
+    public boolean equals(Object plane) {
         if (this == plane) return true;
         if (!(plane instanceof MilitaryPlane)) return false;
         if (!super.equals(plane)) return false;
