@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AirportTest {
-    private static List<Plane> allPlanesList = Arrays.asList(
+    private static List<Plane> planes = Arrays.asList(
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
             new PassengerPlane("Boeing-747", 980, 16100, 70500, 242),
@@ -35,25 +35,25 @@ public class AirportTest {
     @Test
     public void getTransportMilitaryPlanesTest() {
         Airport airport = new Airport(planes);
-        Assert.assertTrue(airport.getTransportMilitaryPlanes().size()>0);
+        Assert.assertTrue(airport.getTransportMilitaryPlanes().size() > 0);
     }
 
     @Test
     public void getBomberMilitaryPlanesTest() {
         Airport airport = new Airport(allPlanesList);
-        Assert.assertTrue(airport.getBomberMilitaryPlanes().size()>0);
+        Assert.assertTrue(airport.getBomberMilitaryPlanes().size() > 0);
     }
 
     @Test
     public void getExperimentalMilitaryPlanesTest() {
         Airport airport = new Airport(planes);
-        Assert.assertTrue(airport.getExperimentalMilitaryPlanes().size()>0);
+        Assert.assertTrue(airport.getExperimentalMilitaryPlanes().size() > 0);
     }
 
     @Test
     public void getFighterMilitaryPlanesTest() {
         Airport airport = new Airport(planes);
-        Assert.assertTrue(airport.getFighterMilitaryPlanes().size()>0);
+        Assert.assertTrue(airport.getFighterMilitaryPlanes().size() > 0);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class AirportTest {
     public void sortPlanesByMaxLoadCapacityTest() {
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
-        Assert.assertTrue(airport.getAllPlanesList().get(0).getMaxLoadCapacity()<=airport.getAllPlanesList().get(1).getMaxLoadCapacity());
+        Assert.assertTrue(airport.getAllPlanesList().get(0).getMaxLoadCapacity() <= airport.getAllPlanesList().get(1).getMaxLoadCapacity());
     }
 
     @Test
@@ -86,11 +86,12 @@ public class AirportTest {
     @Test
     public void hasAtLeastOneBomberInMilitaryPlanesTest() {
         Airport airport = new Airport(planes);
-        Assert.assertTrue(airport.getBomberMilitaryPlanes.size()>0);
+        Assert.assertTrue(airport.getBomberMilitaryPlanes.size() > 0);
     }
 
     @Test
-    public void experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest(){
+    public void experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest() {
         Airport airport = new Airport(planes);
-        Assert.assertTrue(airport.getExprimentalPlanes.get(0).getClassificationLevel!=ClassificationLevel.UNCLUSSIFIED);
+        Assert.assertTrue(airport.getExprimentalPlanes.get(0).getClassificationLevel != ClassificationLevel.UNCLUSSIFIED);
+    }
 }
