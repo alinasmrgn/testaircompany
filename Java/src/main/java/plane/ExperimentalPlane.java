@@ -10,9 +10,9 @@ public class ExperimentalPlane extends Plane{
     private ExperimentalPlaneType experimentalType;
     private ClassificationLevel classificationLevel;
 
-    public ExperimentalPlane(String PlaneModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalPlaneType experimentalTypeType, ClassificationLevel classificationLevel) {
-        super(PlaneModel, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.experimentalTypetype = experimentalType;
+    public ExperimentalPlane(String planeModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalPlaneType experimentalType, ClassificationLevel classificationLevel) {
+        super(planeModel, maxSpeed, maxFlightDistance, maxLoadCapacity);
+        this.experimentalType = experimentalType;
         this.classificationLevel = classificationLevel;
     }
 
@@ -35,13 +35,13 @@ public class ExperimentalPlane extends Plane{
     }
 
     @Override
-    pupublic int hashCode() { return Objects.hash(super.hashCode(), experimentalType, classificationLevel); }
+    public int hashCode() { return Objects.hash(super.hashCode(), experimentalType, classificationLevel); }
 
     @Override
     public String toString() {
         return super.toString().replace("}",
-                ", experimentalType=" +  experimentalType +
-                        "classificationLevel='" + classificationLevel +
+                ", experimentalType=" + experimentalType +
+                        ", classificationLevel=" + classificationLevel +
                         '}');
     }
 }
